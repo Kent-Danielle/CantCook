@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --global-padding: 15px;
+}
+
+body {
+  background: #fffefc;
+  margin: 12px 0 0 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+/* nav */
+#nav {
+  grid-area: nav;
+  border: 5px;
+  border-color: black;
+}
+
+.circle {
+  background-color: black;
+  border-radius: 100%;
+  height: 155px;
+  width: 155px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 150px;
+  width: 150px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  padding: 6px 0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #04c3c4;
+}
+
+/* reviews */
+#sideReviews h3 {
+  color: #04c3c4;
+}
+
+#sideReviews {
+  margin-top: 70px;
+  padding: 0 25px 0;
+}
+
+/* header */
+#header {
+  grid-area: header;
+  overflow: hidden;
+  position: relative;
+}
+
+.intro_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid rgb(206, 203, 198);
+}
+
+.intro_title {
+  position: absolute;
+  text-transform: none;
+  text-align: left;
+}
+
+.intro_title > h2 {
+  padding: 7px 15px 7px;
+  background-color: #fffefc;
+  margin: 0;
+}
+
+.intro_title > h3 {
+  padding: 7px 15px 7px;
+  background-color: black;
+  color: #fffefc;
+  margin: 0;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* newsletter */
+#newsletter {
+  position: relative;
+  height: auto;
+  background-color: #eae8e4;
+  grid-area: newsletter;
+  margin: 10px 0 10px;
+  padding: 20px 20px;
+}
+
+#newsletter > h3 {
+  display: inline;
+  margin: 0;
+}
+
+/* content */
+figure {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+figure > img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+figure > figcaption {
+  color: white;
+  text-align: left;
+  width: 80%;
+  position: absolute;
+  z-index: 1;
+  bottom: 1px;
+  left: 1px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+[src="images/image1.png"] + figcaption {
+  color: black;
+}
+
+[src="images/image2.jfif"] {
+  width: 150%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+section > h2 {
+  color: #04c3c4;
+}
+
+#content1 {
+  grid-area: content1;
+  padding: var(--global-padding);
+}
+
+#content2 {
+  grid-area: content2;
+  padding: var(--global-padding);
+}
+
+#content3 {
+  grid-area: content3;
+  padding: var(--global-padding);
+}
+
+#content4 {
+  grid-area: content4;
+  padding: var(--global-padding);
+}
+
+.date {
+  font-weight: 300;
+}
+
+.readMore {
+  color: #04c3c4;
+  font-weight: 500;
+}
+
+#reviews {
+  grid-area: reviews;
+}
+
+#reviews > h3 {
+  color: #04c3c4;
+}
+
+#reviews > h2 {
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  color: black;
+  margin: 20px 0 20px;
+}
+
+/* footer */
+.author {
+  position: relative;
+}
+
+#footer1 {
+  grid-area: footer1;
+  padding: 5px 5%;
+}
+
+#footer2 {
+  grid-area: footer2;
+}
+
+.author p {
+  font-weight: 400;
+  display: inline;
+}
+
+[class="fab fa-facebook-square"] {
+  font-size: 2rem;
+  color: #04c3c4;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+hr {
+  margin: 0;
+  border: 1px solid rgb(206, 203, 198);
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 92% 8%;
+    grid-template-areas:
+      "nav main"
+      "footer1 footer1";
+    font-weight: 800;
+    font-size: 0.8rem;
+  }
+
+  #main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 70% 80px 70%;
+    grid-template-areas:
+      "header header header header"
+      "newsletter newsletter newsletter newsletter"
+      "content1 content2 content3 content4";
+    overflow-y: scroll;
+  }
+
+  #reviews,
+  #footer2,
+  .nav4,
+  #identity {
+    display: none !important;
+  }
+
+  .intro_title {
+    position: absolute;
+    display: block;
+    top: 80%;
+    left: 20px;
+    right: 20px;
+  }
+
+  .intro_title > h2 {
+    display: inline-block;
+  }
+
+  form {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  #nav {
+    padding: 30px 20px;
+  }
+
+  li a {
+    display: block;
+  }
+
+  ul {
+    width: 100%;
+    height: auto;
+    margin-top: 15%;
+    padding-left: 25px;
+  }
+
+  ul i {
+    margin-right: 10px;
+  }
+
+  #newsletter > h3 {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1280px) {
+  :root {
+    --global-padding: 10px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0 20px 10px;
+  }
+
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 23% 77%;
+    grid-template-areas:
+      "nav"
+      "main";
+    font-weight: 800;
+    font-size: 0.8rem;
+  }
+
+  #main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 70% 100px 130% 40% 10%;
+    grid-template-areas:
+      "header header header header"
+      "newsletter newsletter newsletter newsletter"
+      "content1 content2 content3 content4"
+      "reviews reviews reviews reviews"
+      "footer2 footer2 footer2 footer2";
+    overflow-y: scroll;
+  }
+
+  section > h2 {
+    font-size: 0.9rem;
+  }
+
+  .intro_title {
+    top: 80%;
+  }
+
+  .intro_title > h2 {
+    display: inline-block;
+  }
+
+  #sideReviews,
+  #footer1,
+  #identity {
+    display: none !important;
+  }
+
+  li {
+    display: inline;
+  }
+
+  .circle {
+    height: 125px;
+    width: 125px;
+    margin-left: 3%;
+    float: left;
+    display: block;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  #nav {
+    padding: 10px 10px;
+    position: relative;
+  }
+
+  .logo {
+    height: 120px;
+    width: 120px;
+  }
+
+  ul {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  a > i {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+  }
+
+  .author {
+    margin-top: 20px;
+  }
+  @media only screen and (max-width: 1100px) {
+    form {
+      position: absolute;
+      right: 15px;
+      top: 60%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    #newsletter > h3 > span {
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    figure > figcaption {
+      width: 100%;
+    }
+
+    section > p {
+      line-height: 1.3rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    margin: 0;
+    padding: 0 20px 10px;
+  }
+
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+      "nav"
+      "main";
+    font-weight: 800;
+    font-size: 0.8rem;
+  }
+
+  #main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 60% 18% 95% 95% 95% 95% 38% 10%;
+    grid-template-areas:
+      "identity"
+      "header"
+      "newsletter"
+      "content1"
+      "content2"
+      "content3"
+      "content4"
+      "reviews"
+      "footer2";
+    overflow-y: scroll;
+  }
+
+  .circle,
+  #footer1,
+  #sideReviews,
+  li i {
+    display: none !important;
+  }
+
+  #nav {
+    padding: 0;
+    position: relative;
+  }
+
+  ul {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+  }
+
+  ul > li {
+    margin: 0 40px 0;
+  }
+
+  #identity {
+    grid-area: identity;
+  }
+
+  .intro_title {
+    bottom: 0px;
+    width: 100%;
+  }
+
+  .intro_title > h2,
+  .intro_title > h3 {
+    width: 100%;
+  }
+
+  #newsletter > h3 {
+    display: block;
+  }
+
+  form {
+    display: block;
+  }
+
+  .circle2 {
+    background-color: black;
+    border-radius: 100%;
+    height: 155px;
+    width: 155px;
+    margin: 0 auto;
+  }
+  figure {
+    height: 300px;
+    margin: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    border: 1px solid rgb(206, 203, 198);
+    position: relative;
+  }
+  figure > img {
+    top: -65%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 700px;
+  }
+
+  li {
+    display: inline;
+  }
+
+  a > i {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    figure > img {
+      top: -10%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 700px;
+    }
+  }
+}
