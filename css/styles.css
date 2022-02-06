@@ -134,7 +134,7 @@ figure > figcaption {
   font-style: italic;
 }
 
-[src="images/image1.png"] + figcaption {
+[src="./images/image1.png"] + figcaption {
   color: black;
 }
 
