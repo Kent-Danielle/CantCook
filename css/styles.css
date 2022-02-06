@@ -26,19 +26,6 @@ p {
   border-color: black;
 }
 
-.circle {
-  background-color: black;
-  border-radius: 100%;
-  height: 155px;
-  width: 155px;
-  margin: 0 auto;
-}
-
-.logo {
-  height: 150px;
-  width: 150px;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -59,7 +46,7 @@ li a {
 }
 
 #sideReviews {
-  margin-top: 70px;
+  margin-top: 30px;
   padding: 0 25px 0;
 }
 
@@ -96,6 +83,7 @@ li a {
   margin: 0;
   font-weight: 400;
   font-style: italic;
+  display: block;
 }
 
 /* newsletter */
@@ -273,12 +261,27 @@ hr {
     display: none !important;
   }
 
+  .circle {
+    position: relative;
+    background-color: black;
+    border-radius: 100%;
+    width: 100%;
+    padding-top: 100%;
+  }
+
+  .logo {
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 4.5%;
+    margin: 0 auto;
+  }
+
   .intro_title {
     position: absolute;
     display: block;
     top: 80%;
-    left: 20px;
-    right: 20px;
+    left: 0;
   }
 
   .intro_title > h2 {
@@ -343,7 +346,7 @@ hr {
     grid-area: main;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 70% 100px 130% 40% 10%;
+    grid-template-rows: 70% 100px 145% 40% 10%;
     grid-template-areas:
       "header header header header"
       "newsletter newsletter newsletter newsletter"
@@ -376,25 +379,27 @@ hr {
   }
 
   .circle {
-    height: 125px;
-    width: 125px;
-    margin-left: 3%;
-    float: left;
-    display: block;
+    position: relative;
+    background-color: black;
+    border-radius: 100%;
+    width: 10%;
+    padding-top: 10%;
+    top: 17%;
+    left: 7%;
+  }
+
+  .logo {
+    width: 90%;
     position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    top: 0;
+    left: 3.5%;
+    bottom: 0;
+    right: 0;
   }
 
   #nav {
     padding: 10px 10px;
     position: relative;
-  }
-
-  .logo {
-    height: 120px;
-    width: 120px;
   }
 
   ul {
@@ -467,7 +472,7 @@ hr {
     grid-area: main;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 30% 60% 18% 95% 95% 95% 95% 38% 10%;
+    grid-template-rows: 28% 60% 18% 100% 100% 100% 100% 60% 10%;
     grid-template-areas:
       "identity"
       "header"
@@ -527,12 +532,24 @@ hr {
   }
 
   .circle2 {
+    position: relative;
     background-color: black;
     border-radius: 100%;
-    height: 155px;
-    width: 155px;
+    padding-bottom: 20%;
+    width: 20%;
     margin: 0 auto;
+    top: 10%;
   }
+
+  .logo {
+    width: 90%;
+    position: absolute;
+    top: 1px;
+    left: 4%;
+    bottom: 0;
+    right: 0;
+  }
+
   figure {
     height: 300px;
     margin: 0;
